@@ -28,13 +28,13 @@ config R8A774E1
 
 config R8A7795
 	bool "Renesas SoC R8A7795"
-	select GICV2
+	select GICV2 if !RCAR_XEN
 	imply CLK_R8A7795
 	imply PINCTRL_PFC_R8A77951
 
 config R8A7796
 	bool "Renesas SoC R8A7796"
-	select GICV2
+	select GICV2 if !RCAR_XEN
 	imply CLK_R8A77960
 	imply CLK_R8A77961
 	imply PINCTRL_PFC_R8A77960
